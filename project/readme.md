@@ -1,0 +1,2 @@
+## Project Directory
+This directory contains the major files modified to create the initial web front to pair with the authentication process. It also contains the initial database to store the login details of the user. It will be modified during future iterations.

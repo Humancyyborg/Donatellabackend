@@ -1,5 +1,7 @@
+# This file contains the initial user models, this will be modified in future iterations
 from . import db
 
+# User class  
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True) # primary keys are required by SQLAlchemy
     email = db.Column(db.String(100), unique=True)

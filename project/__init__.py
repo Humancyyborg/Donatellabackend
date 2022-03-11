@@ -1,9 +1,12 @@
+# This file is generally for the setup of the flask app to encapsulate the model
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-# init SQLAlchemy so we can use it later in our models
+# Initializing the SQLAlchemy for future use in the models later
 db = SQLAlchemy()
 
+# defining the function
 def create_app():
     app = Flask(__name__)
 
@@ -12,11 +15,11 @@ def create_app():
 
     db.init_app(app)
 
-    # blueprint for auth routes in our app
+    # plan for auth routes 
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
 
-    # blueprint for non-auth parts of app
+    # plan for non-auth portions of app
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
